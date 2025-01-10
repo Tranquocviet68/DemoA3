@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ Trợ Khách Hàng</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e4d9d9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, textarea, button {
+            width: 97%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .status.pending {
+            background-color: #ffc107;
+            color: #fff;
+        }
+        .status.resolved {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hỗ Trợ Khách Hàng</h1>
+        <form id="support-form">
+            <div class="form-group">
+                <label for="request-type">Chọn loại yêu cầu:</label>
+                <select id="request-type" required>
+                    <option value="">-- Chọn yêu cầu --</option>
+                    <option value="water">Gọi nước uống</option>
+                    <option value="technical">Yêu cầu hỗ trợ kỹ thuật</option>
+                    <option value="other">Yêu cầu khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="details">Chi tiết yêu cầu (tuỳ chọn):</label>
+                <textarea id="details" rows="4" placeholder="Mô tả thêm về yêu cầu của bạn..."></textarea>
+            </div>
+            <button type="submit">Gửi yêu cầu</button>
+        </form>
+        <div id="request-status" class="status pending" style="display: none;">
+            Đang xử lý yêu cầu của bạn...
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phí sử dụng máy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phí sử dụng máy</h1>
+        <div class="time-tracker">
+            <label for="start-time">Thời gian bắt đầu:</label>
+            <input type="datetime-local" id="start-time">
+            <label for="end-time">Thời gian kết thúc:</label>
+            <input type="datetime-local" id="end-time">
+            <button id="calculate-btn">Tính tiền</button>
+        </div>
+
+        <div class="result">
+            <h2>Kết quả</h2>
+            <p>Thời gian sử dụng: <span id="used-time">0 giờ</span></p>
+            <p>Số tiền cần thanh toán: <span id="total-amount">0đ</span></p>
+        </div>
+
+        <div class="payment">
+            <h2>Thanh Toán</h2>
+            <button id="cash-btn">Tiền mặt</button>
+            <button id="momo-btn">Momo</button>
+            <button id="zalopay-btn">ZaloPay</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
